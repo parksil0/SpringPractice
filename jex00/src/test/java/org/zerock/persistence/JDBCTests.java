@@ -4,7 +4,6 @@ import static org.junit.Assert.fail;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
 
 import org.junit.Test;
 
@@ -30,7 +29,7 @@ public class JDBCTests {
 				"book_ex")) {
 			log.info(conn);
 			
-		} catch (SQLException e) {
+		} catch (Exception e) {
 			fail(e.getMessage());
 		} {
 			
