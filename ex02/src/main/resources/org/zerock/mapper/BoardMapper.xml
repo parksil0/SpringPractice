@@ -52,10 +52,10 @@
 							title like '%' ||#{keyword}||'%'
 						</when>
 						<when test="type == 'C'.toString()">
-							title like '%' ||#{keyword}||'%'
+							content like '%' ||#{keyword}||'%'
 						</when>
 						<when test="type == 'W'.toString()">
-							title like '%' ||#{keyword}||'%'
+							writer like '%' ||#{keyword}||'%'
 						</when>
 					</choose>
 				</trim>
