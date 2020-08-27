@@ -11,6 +11,8 @@ insert into tbl_board(bno, title, content, writer)
 
 select * from tbl_board order by bno desc;
 
+select * from tbl_reply order by rno desc;
+
 select
 /*+ INDEX_DESC(tbl_board pk_board) */
 *
@@ -30,3 +32,13 @@ select rn, bno, title, content
         where rownum <= 20
        )
  where rn > 10;
+ 
+select * from tbl_board where rownum < 10 order by bno desc;
+
+select /*+index(tbl_reply idx_reply) */
+    rownum rn, bno, rno, reply, replyer, replydate, updatedate
+    from tbl_reply
+    where bno = 917511
+    and rno > 0;
+    
+update tbl_board set replycnt = (select count(rno) from tbl_reply where tbl_reply.bno = tbl_board.bno);
