@@ -207,7 +207,7 @@
 			console.log(targetFile);
 			
 			$.ajax({
-				uri: '/deleteFile',
+				url: '/deleteFile',
 				data: {fileName: targetFile, type:type},
 				dataType: 'text',
 				type: 'POST',
