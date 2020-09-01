@@ -42,3 +42,7 @@ select /*+index(tbl_reply idx_reply) */
     and rno > 0;
     
 update tbl_board set replycnt = (select count(rno) from tbl_reply where tbl_reply.bno = tbl_board.bno);
+
+SELECT mem.userid, userpw, username, enabled, regdate, updatedate, auth
+		FROM tbl_member mem LEFT OUTER JOIN tbl_member_auth auth on mem.userid = auth.userid
+		WHERE mem.userid = 'admin90';
