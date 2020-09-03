@@ -22,12 +22,13 @@ import org.zerock.domain.SampleDTO;
 import org.zerock.domain.SampleDTOList;
 import org.zerock.domain.TodoDTO;
 
+import lombok.extern.log4j.Log4j;
 import lombok.extern.slf4j.Slf4j;
 
 
 @Controller
 @RequestMapping("/sample/*")
-@Slf4j
+@Log4j
 public class SampleController {
 
 	@InitBinder

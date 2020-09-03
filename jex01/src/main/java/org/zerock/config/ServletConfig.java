@@ -17,6 +17,7 @@ import org.springframework.web.servlet.view.JstlView;
 @ComponentScan(basePackages = {"org.zerock.controller", "org.zerock.exception"})
 public class ServletConfig implements WebMvcConfigurer{
 	
+	@Override
 	public void configureViewResolvers(ViewResolverRegistry registry) {
 		
 		InternalResourceViewResolver bean = new InternalResourceViewResolver();
@@ -27,6 +28,7 @@ public class ServletConfig implements WebMvcConfigurer{
 				
 	}
 	
+	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		
 		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
