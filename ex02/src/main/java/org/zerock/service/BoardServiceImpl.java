@@ -15,7 +15,7 @@ import lombok.extern.slf4j.Slf4j;
 @AllArgsConstructor
 public class BoardServiceImpl implements BoardService {
 
-	//spring 4.3 이상에서 자동 처리
+	//spring 4.3 �씠�긽�뿉�꽌 �옄�룞 泥섎━
 	private BoardMapper mapper;
 	
 	@Override
